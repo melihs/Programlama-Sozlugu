@@ -1,4 +1,4 @@
-<h5>Programlama Sözlüğü<h5>
+<h5>Programlama Sözlüğü(Programming dictionary)<h5>
 <p>Herhangi bir programlama dilinde;anahtar kelime,kod parçası ve bunun gibi türlerin açıklamasını ekleyip,
 veritabanında bilgi havuzu oluşturmaya yarayan uygulamadır.<p><br>
 <u>Özellikleri:</u><br>
