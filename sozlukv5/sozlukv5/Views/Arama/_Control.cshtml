@@ -1,0 +1,31 @@
+﻿@model sozlukv5.Models.Arama
+@using PagedList;
+@using PagedList.Mvc;
+
+
+<table class="table table-hover">
+    <thead>
+        <tr class="danger">
+
+            <th>Programlama dilinin adı</th>
+            <th>Eklenen Kelime</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cust in Model.Liste)
+        {
+            <tr class="active">
+                <td>@cust.ProgramlamaDili</td>
+                <td>@cust.Kelime</td>
+                <td>@cust.Aciklama</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager(Model.Liste, page => Url.Action("KelimeArama", new RouteValueDictionary
+    {
+    {"Page",page},
+    {"progDili",Model.progDili},
+    {"Ankelime",Model.Ankelime}
+    }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId = "ajax-main" }))

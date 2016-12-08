@@ -1,0 +1,82 @@
+﻿@model sozlukv5.Models.Arama
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>KelimeArama</title>
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        h1 {
+            background-color: rgba(71, 46, 177, 0.66);
+            border-radius: 5px;
+            font-family: monospace;
+            color:white;
+           
+        }
+       body{
+           
+           padding-top:4px;
+           padding-left:6px;
+           padding-right:6px;
+       }
+       #butonlar{
+           padding-top:105px;
+       }
+       h4{
+           color:white;
+       }
+    </style>
+</head>
+<body background="http://i.hizliresim.com/Jqkzpq.png
+      
+      ">
+
+    <div id="form">
+        <div>
+            <h1>ANAHTAR KELİMELER VE ANLAMLARI</h1>
+        </div>
+        <form>
+    <div class="form-group">
+
+        @using (Ajax.BeginForm("KelimeArama", "Arama", FormMethod.Post, new AjaxOptions { OnSuccess = "loadCust" }))
+        {
+            <div class="col-xs-2">
+                <h4>Programlama Dili</h4>
+                @*@Html.TextBoxFor(m => m.progDili)*@
+                <input type="text" name="progDili" class="form-control input-sm" />
+                <h4>Aranacak Kelime</h4>
+                @*@Html.TextBoxFor(n => n.Ankelime)*@
+                <input type="text" name="Ankelime" class="form-control input-sm" />
+           </div>
+        <div id="butonlar">
+            <input type="submit" value="Ara" class="btn btn-success" name="submit" />
+            <a class="btn btn-warning" href="/Home/Ekle" role="button">Yeni Ekle</a>
+        </div>
+        }
+               
+            </div>
+    </form>
+
+    </div>
+        <div id="ajax-main">
+            @Html.Partial("_Control", @Model)
+        </div>
+    @section scripts
+    {
+        <script type="text/javascript">
+            function loadCust(result) {
+                $("#ajax-main").html(result);
+            }
+
+        </script>
+
+
+    }
+</body>
+</html>

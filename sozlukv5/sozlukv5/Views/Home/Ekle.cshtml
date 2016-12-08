@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+@using sozlukv5.Models;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .form-control {
+            border: 1px solid green;
+        }
+
+        #isim {
+            width: 250px;
+        }
+
+        #kelime {
+            width: 250px;
+        }
+
+        #aciklama {
+            width: 350px;
+        }
+
+        #form {
+            margin: auto;
+            padding: 33px 4px 5px 36px;
+            color:aliceblue;
+        }
+
+        h1 {
+            background-color: rgba(71, 46, 177, 0.66);
+            border-radius: 5px;
+            font-family: monospace;
+        }
+                  
+    </style>
+    <meta name="description" content="The description of my page" />
+</head>
+<body background="http://i.hizliresim.com/DB6Gn3.png">
+    <form action="/Home/Ekle" method="post">
+        <div id="form">
+            <div>
+                <h1>YAZILIM SÖZLÜĞÜ PROGRAMI</h1>
+            </div>
+            <label>Programlama dili</label><br />
+            <input type="text" class="form-control" name="dil" id="isim" placeholder="ismini girin" />
+            <label>Eklenecek Kelime</label><br />
+            <input type="text" class="form-control" id="kelime" name="kelime" placeholder="Eklenecek kelime" /><br />
+            <label>Açıklama</label>
+            <div class="form-group">
+                <textarea class="form-control" rows="5" id="aciklama" name="aciklama"></textarea>
+            </div><br />
+            <button type="submit" class="btn btn-success" value="Ekle">
+                Ekle
+            </button>
+            <a class="btn btn-danger" href="/Arama/KelimeArama" role="button">Arama Yap</a>
+        </div>
+    </form>
+</body>
+</html>

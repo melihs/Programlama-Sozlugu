@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+@*eklediğimiz model, uyarı verecek bunu engellemek için using eklenmeli*@
+@using sozlukv5.Models;
+@*model yöntemi ile ekrana basma*@
+@model List<Fkullanici>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Liste</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        h1 {
+            background-color: #aec393;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+    </style>
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <div>
+        <div>
+            <h1>ANAHTAR KELİMELER VE ANLAMLARI</h1>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        
+                        <th>Programlama dilinin adı</th>
+                        <th>Eklenen Kelime</th>
+                        <th>Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @*liste foreach ile döndürülür*@
+                    @foreach (Fkullanici kullanici in Model)//burada modeli büyük harfle yazman gerekli
+            {
+                        <tr>
+                           
+                            <td>@kullanici.girilenDil</td>
+                            <td>@kullanici.eklenenKelime</td>
+                            <td>@kullanici.aciklama</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <a class="btn btn-warning" href="/Home/Ekle" role="button">Yeni Ekle</a>
+            
+        </div>
+    </div>
+</body>
+</html>
+
