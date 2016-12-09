@@ -3,15 +3,15 @@
 veritabanında bilgi havuzu oluşturmaya yarayan uygulamadır.(For keywords and code fragments in any programming language
 Application to create a pool of information in the database)<p><br>
 <u>Özellikleri:</u><br>
-<li>Programlama dili ekleme</li>
-<li>Anahtar kelime ekleme</li>
-<li>Açıklama ekleme</li>
-<li>Eklenen verileri listeleme</li>
-<li>Liste içi anahtar kelime veya programlama diline göre arama yapma</li><br>
-Eklenecek özellikler:<br>
-<li>Kayıt silme</li>
-<li>anahtar kelimeye özgü örnek kod bloğu oluşturma</li><br>
-Kullanılan Teknolojiler<br>
+<li>Programlama dili ekleme(Add programming language)</li>
+<li>Anahtar kelime ekleme(Add keywords)</li>
+<li>Açıklama ekleme(Add Explanation)</li>
+<li>Eklenen verileri listeleme(List of added words)</li>
+<li>Liste içi anahtar kelime veya programlama diline göre arama yapma(Search by programming language and key words in the list)</li><br>
+Eklenecek özellikler:(New features to add)<br>
+<li>Kayıt silme(Delete record)</li>
+<li>anahtar kelimeye özgü örnek kod bloğu oluşturma(Add code block by keyword)</li><br>
+Kullanılan Teknolojiler(Used technologies)<br>
 <li>ASP.NET-MVC</li>
 <li>JavaScript</li>
 <li>Bootstrap framework</li>
