@@ -1,6 +1,7 @@
 <h5>Programlama Sözlüğü(Programming dictionary)<h5>
 <p>Herhangi bir programlama dilinde;anahtar kelime,kod parçası ve bunun gibi türlerin açıklamasını ekleyip,
-veritabanında bilgi havuzu oluşturmaya yarayan uygulamadır.<p><br>
+veritabanında bilgi havuzu oluşturmaya yarayan uygulamadır.(For keywords and code fragments in any programming language
+Application to create a pool of information in the database)<p><br>
 <u>Özellikleri:</u><br>
 <li>Programlama dili ekleme</li>
 <li>Anahtar kelime ekleme</li>
